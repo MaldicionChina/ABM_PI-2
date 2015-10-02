@@ -7,10 +7,10 @@
 
 class Agent{
 private:
-    int ID; // Agent's Unique Id
+    int id; // Agent's Unique Id
     double threshold;
 public:
-    Agent();
+    Agent(); // Empty Constructor
     Agent(int &idAgente, double &thresholdAgent);
     int getID(); // Get Agent's Id
     double getThreshold(); // Get Agent's threshold

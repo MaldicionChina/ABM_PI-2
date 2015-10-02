@@ -6,26 +6,27 @@ using namespace std;
 
 int main() {
 
-    int poblacion = 5;
-    vector<Agent> *agentes = new vector<Agent>();
-    int idAgent;
-    double thresholdAgent;
+    int population = 5;
+    vector<Agent> *agents = new vector<Agent>(); // Agent's Vectors
+    int idAgent; // Agetn's Id
+    double thresholdAgent; // Agent's threshold, between 0.0 to 1.0
 
-    cout << "Hello, World!" << endl;
-
-    for (int i = 0; i < poblacion ; i++) {
+    for (int i = 0; i < population; i++) {
         idAgent = i;
         thresholdAgent = 0.1*i;
-        Agent agenteNuevo(idAgent,thresholdAgent);
-        agentes->push_back(agenteNuevo);
+        // New Agent creation
+        Agent newAgent(idAgent,thresholdAgent);
+        // Set a new agent into a vector 'agents'
+        agents->push_back(newAgent);
         cout << idAgent << "----" << thresholdAgent << endl;
     }
 
     int id = 5;
     double threshold = 4.5;
-    for (int i = 0; i < poblacion ; i++) {
-        Agent leer = agentes->at(i);
-        cout << "Agent Id:  "<< leer.getID() <<" Threshold: " << leer.getThreshold() << endl;
+    for (int i = 0; i < population; i++) {
+        // Get Agents in position 'i'
+        Agent readAgent = agents->at(i);
+        cout << "Agent Id:  "<< readAgent.getID() <<" Threshold: " << readAgent.getThreshold() << endl;
     }
 
     return 0;
