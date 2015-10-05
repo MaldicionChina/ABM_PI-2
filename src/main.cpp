@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
 
-    int population = 5;
+    int population = 500;
     vector<Agent> *agents = new vector<Agent>(); // Agent's Vectors
     int idAgent; // Agetn's Id
     double thresholdAgent; // Agent's threshold, between 0.0 to 1.0
@@ -15,12 +15,13 @@ int main() {
 
     allPopulation->createPopulation(population);
     allPopulation->getPopulation(*agents);
+    allPopulation->starSimulation(10,0.1);
 
-    for (int i = 0; i < population; i++) {
-        // Get Agents in position 'i'
-        Agent readAgent = agents->at(i);
-        cout << "Agent Id:  "<< readAgent.getID() <<" Threshold: " << readAgent.getThreshold() << endl;
-    }
+//    for (int i = 0; i < population; i++) {
+//        // Get Agents in position 'i'
+//        Agent readAgent = agents->at(i);
+//        cout << "Agent Id:  "<< readAgent.getID() <<" Threshold: " << readAgent.getThreshold() << endl;
+//    }
 
     return 0;
 }
