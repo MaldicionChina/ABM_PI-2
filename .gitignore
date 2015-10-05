@@ -26,3 +26,8 @@
 *.exe
 *.out
 *.app
+
+#Folder
+.idea/
+build/
+bin/
