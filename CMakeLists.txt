@@ -12,8 +12,14 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib)
     #Ejecutables
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
-# Se añade las fuentes de la librería
-add_library(Agent SHARED ${CMAKE_SOURCE_DIR}/src/Agent.cpp )
+# Se añade las fuentes de la librería Agent
+add_library(agent SHARED ${CMAKE_SOURCE_DIR}/src/Agent.cpp)
+
+# Se añade las fuentes de la librería Agent
+add_library(population SHARED ${CMAKE_SOURCE_DIR}/src/Population.cpp)
+
+## Se añade las fuentes de la librería Agent
+#add_library(comunication SHARED ${CMAKE_SOURCE_DIR}/src/Agent.cpp)
 
 # Se incluye headers de la librerias
 include_directories("${CMAKE_SOURCE_DIR}/inc")
@@ -23,5 +29,4 @@ set(SOURCE_FILES src/main.cpp)
 
 add_executable(ABM_Wall-E ${SOURCE_FILES})
 
-
-target_link_libraries(ABM_Wall-E Agent)
+target_link_libraries(ABM_Wall-E agent population)

@@ -11,10 +11,12 @@ private:
     double threshold;
 public:
     Agent(); // Empty Constructor
-    Agent(int &idAgente, double &thresholdAgent);
+    Agent(int &idAgente, double &thresholdAgent); // Constructor with parameters
     int getID(); // Get Agent's Id
     double getThreshold(); // Get Agent's threshold
     void setAgent(int &idAgente, double &thresholdAgent ); // Set Agent's properties
+
+
 };
 
 #endif //ABM_WALL_E_AGENT_H
