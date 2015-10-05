@@ -9,11 +9,17 @@ class Agent{
 private:
     int id; // Agent's Unique Id
     double threshold;
+    bool buy = false;
 public:
     Agent(); // Empty Constructor
     Agent(int &idAgente, double &thresholdAgent); // Constructor with parameters
+
     int getID(); // Get Agent's Id
     double getThreshold(); // Get Agent's threshold
+
+    bool getBuyState();
+    void setBuyState(bool newState);
+
     void setAgent(int &idAgente, double &thresholdAgent ); // Set Agent's properties
 
 

@@ -8,7 +8,13 @@
 Agent::Agent(){
 
 }
+bool Agent::getBuyState() {
+    return this->buy;
+}
 
+void Agent::setBuyState(bool newState) {
+    this->buy = newState;
+}
 //Get agent's id
 int Agent::getID() {
     return id;
