@@ -70,7 +70,7 @@ int Population::starSimulation(int timeSimulation, double maxThreshold){
                     // Get a random Agent
                     Agent *toAskAgent = &listOfAgent.at(randomAgent);
 
-                    // After Agent ask, It will take a desicion based on Agent's threshold
+                    // After Agent ask, It will take a desicion based on Random Agent's threshold
                     if (toAskAgent->getThreshold() < thresholdToBuy) {
                         // Change Agent's buy state to TRUE
                         testAgent->setBuyState(true);
