@@ -2,6 +2,9 @@
 // Created by alexis on 1/10/15.
 //
 
+// Fuzzy Logic's Library
+#include "fl/Headers.h"
+
 #ifndef ABM_WALL_E_AGENT_H
 #define ABM_WALL_E_AGENT_H
 
